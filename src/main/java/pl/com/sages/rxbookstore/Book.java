@@ -1,11 +1,15 @@
 package pl.com.sages.rxbookstore;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Table;
 
 @Data
-@Table("books")
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class Book {
     @Id
     private Integer id;

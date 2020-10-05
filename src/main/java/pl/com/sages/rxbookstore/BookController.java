@@ -1,7 +1,11 @@
 package pl.com.sages.rxbookstore;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -17,7 +21,8 @@ public class BookController {
     }
 
     @PostMapping
-    public Mono<Book> createBook(@RequestBody Book book) {
+    public Mono<Book> addBook(@RequestBody Book book) {
         return bookService.createBook(book);
     }
 }
+
